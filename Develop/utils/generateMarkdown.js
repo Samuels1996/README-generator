@@ -21,7 +21,7 @@ function renderLicenseLink(license) {
   } else if (license === licenseChoices[1]) {
     return `[${licenseArr[1]}](https://opensource.org/licenses/Apache-2.0)`
   } else if (license === licenseChoices[2]) {
-    return `[${licenseArr[22]}](https://opensource.org/licenses/MIT)`
+    return `[${licenseArr[2]}](https://opensource.org/licenses/MIT)`
   } else {
     return ''
   }
@@ -46,9 +46,39 @@ function generateMarkdown(data) {
   ## Badges
   ${renderLicenseBadge(data.license)}
 
+  ## Table of Contents
+  * [License](#license)
+  * [Description](#description)
+  * [Usage](#usage)
+  * [Installation](#installation)
+  * [Tests](#tests)
+  * [Contributions](#contributions)
+  * [Questions](#questions)
+
   ##License 
   ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data.license)}
+
+  ## Description
+  ${data.description}
+
+  ## Usage
+  ${data.usage}
+
+  ## Installation
+  ${data.installation}
+
+  ## Tests
+  ${data.tests}
+  
+  ## Contributions
+  ${data.contributions}
+  
+  ## Questions?
+  
+  ### Contact info:
+  ${data.email}
+  ${data.githubName}
 `;
 }
 
