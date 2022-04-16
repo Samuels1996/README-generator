@@ -55,7 +55,7 @@ function generateMarkdown(data) {
   * [Contributions](#contributions)
   * [Questions](#questions)
 
-  ##License 
+  ## License 
   ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data.license)}
 
